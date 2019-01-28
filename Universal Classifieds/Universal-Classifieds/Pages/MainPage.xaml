@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="AutomaticListigs.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1432" Width="1651">
+
+    <Grid x:Name="Generator">
+        <Grid.RenderTransform>
+            <CompositeTransform Rotation="-0.525" TranslateX="4E-06" TranslateY="3E-06"/>
+        </Grid.RenderTransform>
+        <TextBox x:Name="unusualSellMultiplier" KeyDown="unusualSellMultiplier_KeyDown" InputScope="Number" Header="Unusual Sell Multiplier"  HorizontalAlignment="Left" Margin="30,589,0,0" Text="" VerticalAlignment="Top" Height="72" Width="283" FontSize="20"/>
+        <TextBox x:Name="strangeSellMultiplier" KeyDown="strangeSellMultiplier_KeyDown" InputScope="Number" Header="Strange Sell Multiplier" HorizontalAlignment="Left" Margin="28,379,0,0" Text="" VerticalAlignment="Top" Height="71" Width="274" FontSize="20"/>
+        <TextBox x:Name="othersSellMultiplier" KeyDown="othersSellMultiplier_KeyDown"  InputScope="Number" Header="Others Sell Multiplier" HorizontalAlignment="Left" Margin="37,474,0,0" Text="" VerticalAlignment="Top" Height="66" Width="272" FontSize="20"/>
+        <TextBox x:Name="unusualBuyMultiplier" KeyDown="unusualBuyMultiplier_KeyDown" InputScope="Number" Header="Unusual Buy Multiplier" HorizontalAlignment="Left" Margin="38,33,0,0" Text="" VerticalAlignment="Top" FontSize="20" Width="270" Height="72"/>
+        <TextBox x:Name="strangeBuyMultiplier" KeyDown="strangeBuyMultiplier_KeyDown" InputScope="Number" Header="Strage Buy Multiplier" HorizontalAlignment="Left" Margin="34,117,0,0" Text="" VerticalAlignment="Top" FontSize="20" Height="71" Width="274"/>
+        <TextBox x:Name="othersBuyMultiplier" KeyDown="othersBuyMultiplier_KeyDown" InputScope="Number" Header="Others Buy Multiplier" HorizontalAlignment="Left" Margin="28,211,0,0" Text="" VerticalAlignment="Top" FontSize="20" Height="68" Width="273" RenderTransformOrigin="0.494,0.609" UseLayoutRounding="False" d:LayoutRounding="Auto"/>
+        <TextBox x:Name="recreationTimeout" KeyDown="recreationTimeout_KeyDown" InputScope="Number" Header="Recreation Timeout" HorizontalAlignment="Left" Margin="35,288,0,0" Text="" VerticalAlignment="Top" Height="71" Width="271" FontSize="20"/>
+        <CheckBox x:Name="autoCreateSell" Content="Auto Recreate Sell Listings" HorizontalAlignment="Left" Margin="453,513,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <CheckBox x:Name="autoCreateBuy" Content="Auto Recreate Buy Listings" HorizontalAlignment="Left" Margin="452,449,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="createSellListings" Content="Create Sell Listings" HorizontalAlignment="Left" Margin="380,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.564,0.515" Click="createSellListings_Click"/>
+        <Button x:Name="createBuyListings" Content="Create Buy Listings" HorizontalAlignment="Left" Margin="379,336,0,0" VerticalAlignment="Top" Click="createBuyListings_Click"/>
+        <Button x:Name="updatePreferences" Content="Update Preferences" HorizontalAlignment="Left" Margin="687,175,0,0" VerticalAlignment="Top" Click="updatePreferences_Click"/>
+        <Button x:Name="updateInfo" Content="Update User Info" HorizontalAlignment="Left" Margin="690,111,0,0" VerticalAlignment="Top" Click="updateInfo_Click"/>
+    </Grid>
+</Page>
