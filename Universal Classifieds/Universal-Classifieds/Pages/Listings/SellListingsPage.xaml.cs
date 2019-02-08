@@ -11,7 +11,7 @@ using AutomaticListings.Pages.Dialogs;
 
 using AutomaticListings.Utilities;
 using System.Threading.Tasks;
-using AutomaticListings.Models;
+
 using System.IO;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,7 +22,6 @@ namespace AutomaticListigs.Pages.Listings
     /// </summary>
     public sealed partial class SellListingsPage : Page
     {
-        private readonly Remote remote;
         private readonly Ensure ensure;
         private readonly FileReader fileReader;
         private readonly FileWriter fileWriter;
@@ -35,17 +34,11 @@ namespace AutomaticListigs.Pages.Listings
             this.fileReader = new FileReader();
             this.fileWriter = new FileWriter();
             this.ensure = new Ensure();
-            this.remote = new Remote();
             this.InitializeComponent();
         }
 
-        private async void cancelButton_Click(object sender, RoutedEventArgs e)
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            //var userInfoModel = JsonConvert.DeserializeObject<UserInfoModel>(
-            //    this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
-            //var data = await this.remote.DownloadUserInventory(userInfoModel);
-            //var userInventoryObj = JsonConvert.DeserializeObject<UserInventoryModel>(data);
-
             this.Frame.Navigate(typeof(MainPage));
         }
 
@@ -65,13 +58,15 @@ namespace AutomaticListigs.Pages.Listings
             await this.ensure.FileExistsInDirectoryAsync(this.LocalFolder, LocalData.Prices, LocalData.ResourcesFolder);
         }
 
-        private async void UpdateItemPrices()
+        private void UpdateItemPrices()
         {
-            var data = JsonConvert.DeserializeObject<UserInfoModel>(
-                 this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
-            var prices = await this.remote.DownloadItemPrices(data);
+            throw new NotImplementedException();
+            // TODO
+            //var data = JsonConvert.DeserializeObject<UserInfoModel>(
+            //     this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
+            //var prices = await this.remote.DownloadItemPrices(data);
 
-            this.fileWriter.WriteDataToFile(this.LocalFolder, LocalData.Prices, prices);
+            //this.fileWriter.WriteDataToFile(this.LocalFolder, LocalData.Prices, prices);
         }
 
         private string GetItemPrices()
@@ -80,11 +75,13 @@ namespace AutomaticListigs.Pages.Listings
             return this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.Prices);
         }
 
-        private async Task<string> GetUserInventory()
+        private Task<string> GetUserInventory()
         {
-            var data = JsonConvert.DeserializeObject<UserInfoModel>(
-                this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
-            return await this.remote.DownloadUserInventory(data);
+            throw new NotImplementedException();
+            // TODO
+            //var data = JsonConvert.DeserializeObject<UserInfoModel>(
+            //    this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
+            //return await this.remote.DownloadUserInventory(data);
         }
     }
 }

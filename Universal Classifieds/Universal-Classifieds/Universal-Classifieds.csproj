@@ -102,13 +102,6 @@
     </Compile>
     <Compile Include="Models\PreferencesModel.cs" />
     <Compile Include="Models\UserInfoModel.cs" />
-    <Compile Include="Models\UserInventoryModel.cs" />
-    <Compile Include="Models\UserInventoryModels\Asset.cs" />
-    <Compile Include="Models\UserInventoryModels\Description.cs" />
-    <Compile Include="Models\UserInventoryModels\DescriptionModels\Action.cs" />
-    <Compile Include="Models\UserInventoryModels\DescriptionModels\ItemDescription.cs" />
-    <Compile Include="Models\UserInventoryModels\DescriptionModels\MarketAction.cs" />
-    <Compile Include="Models\UserInventoryModels\DescriptionModels\Tag.cs" />
     <Compile Include="Pages\Dialogs\InfoDialog.xaml.cs">
       <DependentUpon>InfoDialog.xaml</DependentUpon>
     </Compile>
@@ -137,7 +130,6 @@
     <Compile Include="Utilities\FileReader.cs" />
     <Compile Include="Utilities\FileWriter.cs" />
     <Compile Include="Utilities\Messages.cs" />
-    <Compile Include="Utilities\Remote.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
