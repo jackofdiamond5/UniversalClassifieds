@@ -61,12 +61,6 @@ namespace AutomaticListigs.Pages.Listings
         private void UpdateItemPrices()
         {
             throw new NotImplementedException();
-            // TODO
-            //var data = JsonConvert.DeserializeObject<UserInfoModel>(
-            //     this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
-            //var prices = await this.remote.DownloadItemPrices(data);
-
-            //this.fileWriter.WriteDataToFile(this.LocalFolder, LocalData.Prices, prices);
         }
 
         private string GetItemPrices()
@@ -78,10 +72,6 @@ namespace AutomaticListigs.Pages.Listings
         private Task<string> GetUserInventory()
         {
             throw new NotImplementedException();
-            // TODO
-            //var data = JsonConvert.DeserializeObject<UserInfoModel>(
-            //    this.fileReader.ReadDataFromFile(this.LocalFolder, LocalData.UserInfo));
-            //return await this.remote.DownloadUserInventory(data);
         }
     }
 }
