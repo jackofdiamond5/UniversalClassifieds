@@ -13,13 +13,9 @@ using AutomaticListings.Utilities;
 using System.Threading.Tasks;
 
 using System.IO;
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace AutomaticListigs.Pages.Listings
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class SellListingsPage : Page
     {
         private readonly Ensure ensure;

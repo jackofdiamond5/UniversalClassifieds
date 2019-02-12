@@ -15,13 +15,8 @@ using AutomaticListigs.Pages.Listings;
 using AutomaticListings.Utilities;
 using System.IO;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace AutomaticListigs
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         private const int TimerMinValue = 30;
@@ -120,7 +115,7 @@ namespace AutomaticListigs
             this.autoCreateBuy.IsChecked = infoFromFile.AutoCreateBuyListings;
             this.recreationTimeout.Text = infoFromFile.RecreationTimeout;
         }
-        
+
         private PreferencesModel EnsurePreferencesData(PreferencesModel infoFromFile)
         {
             if (infoFromFile == null || string.IsNullOrEmpty(infoFromFile.UnusualSellMultplier) ||
